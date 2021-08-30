@@ -1,0 +1,98 @@
+:root {
+  --color-background: #ffa500;
+  --color-btnSearch: #ff0000;
+  --color-headings: #1b0760;
+  --color-border: #ccc;
+  --border-radius: 30px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+h1 {
+  /* 1 time html font size html  */
+  font-size: 7rem;
+}
+
+/* Buttons */
+.butto {
+  border-radius: var(--border-radius);
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem 4vw;
+  margin: 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  display: block;
+  margin: 10rem auto;
+  width: 25%;
+}
+
+.butto:hover {
+  background-color: #ccc;
+}
+
+.butto--accent {
+  background-color: var(--color-btnSearch);
+  border-color: var(--color-btnSearch);
+  color: #fff;
+  margin-left: 0.2rem;
+}
+
+.butto--accent:hover {
+  background-color: #c72b05;
+}
+
+/* ---------------INPUTS------------------- */
+.input1 {
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  color: var(--color-headings);
+  font-size: 3rem;
+  outline: 0;
+  padding: 1.5rem 3rem;
+}
+
+.input-group {
+  margin-top: 6rem;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .butto {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input1 {
+    font-size: 1.5rem;
+  }
+}
