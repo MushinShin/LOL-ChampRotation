@@ -70,6 +70,12 @@ h1 {
   background-color: #c72b05;
 }
 
+@media screen and (min-width: 1024px) {
+  .butto {
+    font-size: 1.5rem;
+  }
+}
+
 /* ---------------INPUTS------------------- */
 .input1 {
   border-radius: var(--border-radius);
