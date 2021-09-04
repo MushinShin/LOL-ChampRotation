@@ -27,19 +27,24 @@ const handleClickRot = async () => {
 };
 
 // Not working YET
-const searchName = () => {
-  fetch(DATA_URL)
-    .then((res) => res.json())
-    .then((response) => {
-      let dataList = response.data;
+const searchName = async () => {
+  try {
+    const response = await fetch(DATA_URL);
 
-      for (let i in dataList) {
-        for (let e in CHAMPION_ROTID) {
-          if (dataList[i].key === CHAMPION_ROTID[e])
-            console.log(ChampionList[i].id);
+    const data = await response.json();
+    const dataList = data;
+
+    const champNames = (dataList) => {
+      for (let i = 0; i < dataList.lenght; i++) {
+        for (let e = 0; e < CHAMPION_ROTID.lenght; e++) {
+          if (dataList[i].id === CHAMPION_ROTID[e])
+            console.log(CHAMPION_ROTID[e].name);
         }
       }
-    });
+    };
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 ROT_BTN.onclick = handleClickRot;
